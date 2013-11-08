@@ -6,6 +6,6 @@ iter:first()
 
 while true do
   key, value = iter:next()
-  if not nil then break end
+  if not key then break end
   print(key .. " = " .. value)
 end
