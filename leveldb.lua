@@ -226,7 +226,7 @@ function Iterator:next()
   leveldb.leveldb_iter_next(self._iterator)
   
   local valid = leveldb.leveldb_iter_valid(self._iterator)
-  if not valid then
+  if valid == 0 then
     return nil
   end
 
